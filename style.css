@@ -9,3 +9,26 @@
 .red {
   color: red;
 }
+
+#up {
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 100px;
+  border-left-width: 100px;
+  border-bottom: 139px solid black;
+}
+
+#down {
+  width: 0;
+height: 0;
+border: 0 solid transparent;
+border-left-width: 100px;
+border-right-width: 100px;
+border-top: 139px solid black;
+margin-bottom: 20px;
+}
+
+#temperature {
+  font-size: 280pt;
+}

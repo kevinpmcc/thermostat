@@ -33,7 +33,7 @@ $(document).ready(function(){
 
   function updateTemperature() {
     $('#temperature').attr('class', thermostat.color());
-    $('#temperature').text(thermostat._temperature + 'ºC');
+    $('#temperature').text(thermostat._temperature + 'º');
   }
 
   $('#select-city').submit(function(event){
