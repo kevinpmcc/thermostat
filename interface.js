@@ -3,7 +3,7 @@ $(document).ready(function(){
 
   energyMode();
   updateTemperature();
-
+  getTemperature();
 
   $('#up').click(function() {
     thermostat.up();
@@ -26,6 +26,14 @@ $(document).ready(function(){
     energyMode();
   });
 
+  function getTemperature() {
+    $.get('localhost:4567/temperature', function(temp) {
+      $('#temperature').text(temp));
+    }
+    }
+
+
+  }
   function energyMode() {
     $('#energySavingMode').text('Energy Saving: ' + thermostat.powerSaving());
   }
