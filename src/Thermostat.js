@@ -35,6 +35,8 @@ Thermostat.prototype.isMaxTemp = function() {
 }
 
 Thermostat.prototype.powerSavingSwitch = function() {
+  if (this._temperature > 25) {
+    this._temperature = 25 }
   this._powerSavingMode = !this._powerSavingMode
   this.setMaxTemp()
 }
@@ -49,10 +51,28 @@ Thermostat.prototype.reset = function() {
 
 Thermostat.prototype.color = function() {
   if (this._temperature < 18){
-    return 'green'
-  };
+    return 'green';
+  }
   if (this._temperature < 25){
-    return 'yellow'
-  };
+    return 'yellow';
+  }
   return 'red';
 }
+
+Thermostat.prototype.powerSaving = function() {
+  if (this._powerSavingMode) {
+   return 'ON'
+  }
+  else {
+   return 'OFF'
+  }; 
+}
+
+
+
+
+
+
+
+
+
